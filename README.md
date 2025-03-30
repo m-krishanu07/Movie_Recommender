@@ -1,46 +1,69 @@
 🎬 Movie Recommendation System
+A content-based movie recommender built with Machine Learning and Streamlit. Select a movie, and the system suggests similar ones using cosine similarity on TMDB data.
 
-A personalized movie recommendation system built with Machine Learning and Streamlit. This web app suggests movies similar to the one you select using content-based filtering.
+🚀 Live Demo: Click here (Update with your Streamlit link!)
 
-🚀 Live Demo: Click here to view the deployed app (Update with your Streamlit link once deployed!)
+📌 Tech Stack
+Python, Pandas, NumPy
 
-📌 Features
-✅ Find similar movies to your favorite ones
-✅ Uses TMDB dataset for recommendations
-✅ Displays movie posters for a better experience
-✅ Fast and interactive UI built with Streamlit
-✅ Deployed for free on Streamlit Community Cloud
+Scikit-Learn (Cosine Similarity)
 
-🏗️ Tech Stack
-Python 🐍
+Streamlit (Web UI)
 
-Pandas & NumPy 🏗️
+TMDB API (Movie Posters)
 
-Scikit-Learn 🤖
+🏗️ Key Code Snippets
+Loading Data & Similarity Matrix
+python
+Copy
+Edit
+movies = pickle.load(open('movies.pkl', 'rb'))
+similarity = pickle.load(open('similarity.pkl', 'rb'))
+Recommendation Function
+python
+Copy
+Edit
+def recommend(movie_title):
+    idx = movies[movies['original_title'] == movie_title].index[0]
+    scores = sorted(enumerate(similarity[idx]), key=lambda x: x[1], reverse=True)[1:6]
+    return [movies.iloc[movie[0]]['original_title'] for movie in scores]
+Fetching Movie Posters
+python
+Copy
+Edit
+def fetch_poster(movie_id):
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=YOUR_API_KEY"
+    return f"https://image.tmdb.org/t/p/w500{requests.get(url).json().get('poster_path')}"
+Streamlit UI
+python
+Copy
+Edit
+st.title("🎬 Movie Recommendation System")
+selected_movie = st.selectbox("Choose a Movie:", movies['original_title'])
+if st.button("Get Recommendations"):
+    names, posters = recommend(selected_movie)
+    for name, poster in zip(names, posters):
+        st.image(poster, caption=name, width=150)
+🚀 Run the Project
+bash
+Copy
+Edit
+pip install -r requirements.txt
+streamlit run app.py
+🌎 Deployment (Streamlit Cloud)
+Upload to GitHub
 
-Streamlit 🎨
+Go to Streamlit Cloud
 
-TMDB API 🎥
+Connect repo & deploy!
 
-📂 Dataset
-We used the TMDB 5000 Movies Dataset, which contains:
+📌 Author: Krishanu Maji
 
-Movie titles
+⭐ Star this repo if you found it useful!
 
-Overview & genres
 
-Cast & crew details
 
-Popularity & ratings
 
-📌 Dataset source: TMDB 5000 Movies
 
-🎥 How It Works
-Select a movie from the dropdown
 
-Click on "Get Recommendations"
-
-The app will display 5 similar movies with posters
-
-💡 The recommendation engine uses cosine similarity based on movie descriptions, genres, and cast/crew data.
 
