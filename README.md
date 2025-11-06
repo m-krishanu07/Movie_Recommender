@@ -5,7 +5,7 @@
 
 > **CineDark** is a sleek and intelligent **Movie Recommendation System** built using **Python**, **Streamlit**, and **Machine Learning**.  
 > It uses a **content-based filtering** approach (TF-IDF + Cosine Similarity) to recommend movies similar to the one you love — complete with posters, overviews, and ratings fetched via APIs.  
-
+![App Screenshot](https://github.com/m-krishanu07/Movie_Recommender/blob/main/Screenshot%202025-11-06%20233618.png)
 ---
 
 ## 🧠 Project Overview  
@@ -22,8 +22,7 @@ This project has two main components:
    - Displays posters and brief movie info via **TMDB API** integration.  
 
 ---
-
-
+![More](https://github.com/m-krishanu07/Movie_Recommender/blob/main/Screenshot%202025-11-06%20233653.png)
 ## ⚙️ Approach & Methodology  
 
 ### 🧩 1. **Data Source**  
