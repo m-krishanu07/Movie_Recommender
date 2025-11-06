@@ -42,7 +42,7 @@ Select a movie, and the system suggests similar ones using **cosine similarity**
 
 | Home Page | Recommendation Results |
 |------------|------------------------|
-| ![Home](images/homepage.png) | ![Results](images/recommendations.png) |
+| ![Home](Screenshot 2025-11-06 233545.png) | ![Results](images/recommendations.png) |
 
 📍 *Place your screenshots inside an `images/` folder in your project directory.*
 
