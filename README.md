@@ -44,7 +44,7 @@ Select a movie, and the system suggests similar ones using **cosine similarity**
 |------------|------------------------|
 | ![Home](https://github.com/m-krishanu07/Movie_Recommender/blob/main/Screenshot%202025-11-06%20233545.png) | ![Results](https://github.com/m-krishanu07/Movie_Recommender/blob/main/Screenshot%202025-11-06%20233653.png) |
 
-📍 *Place your screenshots inside an `images/` folder in your project directory.*
+image[Example](https://github.com/m-krishanu07/Movie_Recommender/blob/main/Screenshot%202025-11-06%20233618.png)
 
 ---
 
