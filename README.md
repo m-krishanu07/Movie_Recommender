@@ -1,4 +1,4 @@
-%%writefile README.md
+
 # 🎬 CineDark — AI-Powered Movie Recommendation System  
 
 ![App Banner](https://github.com/m-krishanu07/Movie_Recommender/blob/main/Screenshot%202025-11-06%20233545.png)
